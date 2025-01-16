@@ -6,23 +6,24 @@ import {
   useMatch,
   useParams
 } from "react-router-dom";
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
 
 function App() {
   return (
       <Router>
       <div>
-        <ul>
-          <li>
+        <header className="navLinks">
+          <div>
             <Link to="/">Home</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="/about">About</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="/seeds">My Seeds</Link>
-          </li>
-        </ul>
+          </div>
+        </header>
 
         <Routes>
           <Route path="/about" element={<About/>}/>
@@ -32,10 +33,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function Seeds() {

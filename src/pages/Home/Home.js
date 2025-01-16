@@ -1,4 +1,4 @@
-import seeds from '../seeds.png';
+import seeds from '../../seeds.png';
 import './Home.css';
 
 function Home() {
@@ -14,11 +14,11 @@ function Home() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="./seeds"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Seeds
+          View Your Seeds
         </a>
       </header>
     </div>
