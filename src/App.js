@@ -1,13 +1,14 @@
 import './App.css';
 import {
   BrowserRouter as Router,
-  Routes, Route,
-  Link,
-  useMatch,
-  useParams
+  Route, 
+  Routes,
+  Link
 } from "react-router-dom";
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Seeds from './pages/Seeds/Seeds';
+import Seed from './pages/Seeds/Seed';
 
 function App() {
   return (
@@ -23,56 +24,20 @@ function App() {
           <div>
             <Link to="/seeds">My Seeds</Link>
           </div>
+          <div>
+            <Link to="/seeds/1">Seed 1: Arugula</Link>
+          </div>
         </header>
 
         <Routes>
           <Route path="/about" element={<About/>}/>
           <Route path="/seeds" element={<Seeds/>}/>
+          <Route path="/seeds/:id" element={<Seed />} />
           <Route path="/" element={<Home/>}/>
         </Routes>
       </div>
     </Router>
   );
-}
-
-function Seeds() {
-  let match = useMatch();
-  // npm i react-router-dom@latest might need to be run if useMatch needs a pattern
-
-  return (
-    <div>
-      <h2>Seeds</h2>
-
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
-
-      {/* The Seeds page has its own <Switch> with more routes
-          that build on the /seeds URL path. You can think of the
-          2nd <Route> here as an "index" page for all seeds, or
-          the page that is shown when no seed is selected */}
-      <Routes>
-        <Route path={`${match.path}/:seedId`}>
-          <Seed />
-        </Route>
-        <Route path={match.path}>
-          <h3>Please select a seed.</h3>
-        </Route>
-      </Routes>
-    </div>
-  );
-}
-
-function Seed() {
-  let { seedId } = useParams();
-  return <h3>Requested seed ID: {seedId}</h3>;
 }
 
 export default App;
