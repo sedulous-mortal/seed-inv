@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+import seeds from './seeds.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={seeds} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to AllMySeeds
+        </p>
+        <p>
+          May your seeds be many, and easily tracked here!
         </p>
         <a
           className="App-link"
@@ -15,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          View Seeds
         </a>
       </header>
     </div>
