@@ -1,4 +1,5 @@
 import seeds from '../../seeds.png';
+import SeedList from '../Seeds/SeedList';
 import './Home.css';
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
         <p>
           May your seeds be many, and easily tracked here!
         </p>
+        <SeedList/>
         <a
           className="App-link"
           href="./seeds"

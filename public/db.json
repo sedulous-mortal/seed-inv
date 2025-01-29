@@ -1,0 +1,7 @@
+{
+    "products": [
+      { "id": 1, "name": "Arugula", "cost_in_cents_per_seed": 1, "source": "Burpee", "true_to_type": "no" },
+      { "id": 2, "name": "Radish", "cost_in_cents_per_seed": 2, "source": "Botanical Interests", "true_to_type": "yes"},
+      { "id": 3, "name": "Zucchini", "cost_in_cents_per_seed": 3, "source": "Caleb Warnock", "true_to_type": "yes" }
+    ]
+  }
